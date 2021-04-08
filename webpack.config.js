@@ -30,11 +30,11 @@ const polyfills = [
 ];
 
 const assets = [
-  {
-    from: "src/img",
-    to: "img/",
-  },
-  "src/manifest.webmanifest",
+  // {
+  //   from: "src/img",
+  //   to: "img/",
+  // },
+  // "src/manifest.webmanifest",
 ];
 
 const plugins = [
@@ -42,7 +42,7 @@ const plugins = [
   new webpack.ProgressPlugin(),
   new HtmlWebpackPlugin({
     filename: "index.html",
-    template: "./src/index.html",
+    // template: "./src/index.html",
     minify: {
       collapseWhitespace: true,
       minifyCSS: true,
@@ -73,7 +73,7 @@ module.exports = ({ mode, presets }) => {
                 [
                   "@babel/preset-env",
                   {
-                    useBuiltins: "usage",
+                    useBuiltIns: "usage",
                     targets: ">1%, not dead, not ie 11",
                   },
                 ],
